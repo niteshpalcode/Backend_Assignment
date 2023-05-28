@@ -56,14 +56,33 @@ On successfull response it will provide detailsId
  * http://localhost:8888/generate//pdf/details/{invoiceId} <br>
   This API used for getting Pdf file for perticular InvoiceId <br>
   On successfull we can Download the file
+
+## SpringBoot App Running
+![PDF_Generator_App_Running_Pic](https://github.com/niteshpalcode/Backend_Assignment/assets/101392580/5b7e3724-e5c8-4c0d-be52-79761e306237)
+
  
+## Swagger UI 
+
+* Swagger Home Page
+![SwaggerUI_Home_Page](https://github.com/niteshpalcode/Backend_Assignment/assets/101392580/987595c6-91aa-42d0-b605-c2ce2f89f546)
+
+* Swagger PDF Controller
+![SwaggerUI_PDF_Controller](https://github.com/niteshpalcode/Backend_Assignment/assets/101392580/671636e1-7abe-428f-936f-0e63434321b7)
+
+* Add Details (User And Seller)
+![SavedDetails](https://github.com/niteshpalcode/Backend_Assignment/assets/101392580/fd18cbe4-eac9-474c-8253-2667217f0f01)
+
+* Add Item
+![ItemAdded](https://github.com/niteshpalcode/Backend_Assignment/assets/101392580/408325fa-6c31-48a2-a123-7b8612832c03)
+
+* PDF Generation through url 
+
+
+![PDF](https://github.com/niteshpalcode/Backend_Assignment/assets/101392580/bc26e70f-8b5a-44ca-9886-8ef0b1a4a555)
 
 
 
 
 
-
-
-
-
+# ThankYou
 
