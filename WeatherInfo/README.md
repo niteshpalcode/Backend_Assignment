@@ -25,7 +25,7 @@ This project is designed to offer a REST API that allows users to obtain weather
 ````
     server.port=8888
 
-    spring.datasource.url=jdbc:mysql://localhost:3306/ecomdb;
+    spring.datasource.url=jdbc:mysql://localhost:3306/weather;
     spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
     spring.datasource.username=put your mysql username
     spring.datasource.password=put your mysql password
