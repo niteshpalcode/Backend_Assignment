@@ -18,10 +18,10 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 public class LocationImpl implements  LocationService{
 
 	
-	@Autowired
+	@Autowired(required = true)
 	private RestTemplate restTemplate;
 	
-	@Autowired
+	@Autowired(required = true)
 	private LocationRepository locationRepository;
 
 	@Override

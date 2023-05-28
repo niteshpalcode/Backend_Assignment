@@ -22,13 +22,13 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 @Service
 public class WeatherImpl implements WeatherService {
 
-	@Autowired
+	@Autowired(required = true)
 	private WeatherRepository weatherRepository;
 
-	@Autowired
+	@Autowired(required = true)
 	private LocationRepository locationRepository;
 
-	@Autowired
+	@Autowired(required = true)
 	private RestTemplate restTemplate;
 
 	@Override
