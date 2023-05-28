@@ -3,21 +3,17 @@
 
 This project is a Spring Boot application that provides a RESTful API to generate PDF documents dynamically using a Java Template Engine. It utilizes various technologies and dependencies to simplify the process of PDF generation and enable seamless integration with other systems.
 
-## Technologies & Dependencies Used
+## TechStack
 
 The following technologies and dependencies are used in this project:
 
-* Java: Programming language used for the application development.
-* Spring Boot: Framework used to create the Spring-based application.
-* STS/Eclipse: Integrated Development Environment (IDE) for Java development.
-* Spring Web: Module for building RESTful web services with Spring.
-* Spring Data JPA: Framework for simplifying database access and management.
-* MySQL: Relational Database Management System (RDBMS) used for data persistence.
-* Spring DevTools: Set of tools for development-time enhancements and automatic application restarts.
+* Java
+* Spring Boot
+* Spring Web
+* MySQL
 * OpenPDF: Java library for generating PDF documents.
-* Lombok: Library for reducing boilerplate code in Java classes.
-* Postman: API development and testing tool for interacting with the RESTful API endpoints.
-* Swagger UI: Framework for generating interactive API documentation.
+* Lombok
+* Swagger UI
 
 
 ## Getting Started
