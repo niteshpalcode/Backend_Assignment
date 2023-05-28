@@ -40,16 +40,16 @@ public class PdfController {
 		return new ResponseEntity<Details>(detailsService.addNewDetails(details), HttpStatus.CREATED);
 	}
 
-	@PostMapping("/{sellerId}")
-	public ResponseEntity<Items> addItems(@RequestBody Items items, @PathVariable("sellerId") Integer sellerId) throws ItemsException,DetailsException {
+	@PostMapping("/{detailsId}")
+	public ResponseEntity<Items> addItems(@RequestBody Items items, @PathVariable("detailsId") Integer detailsId) throws ItemsException,DetailsException {
 
-		return new ResponseEntity<Items>(itemsService.addItems(items, sellerId), HttpStatus.CREATED);
+		return new ResponseEntity<Items>(itemsService.addItems(items, detailsId), HttpStatus.CREATED);
 	}
 	
-	@GetMapping("/pdf/details/{detailsId}")
-	public ResponseEntity<InputStreamResource> getPdf(@PathVariable("detailsId") Integer detailsId)
+	@GetMapping("/pdf/details/{invoiceId}")
+	public ResponseEntity<InputStreamResource> getPdf(@PathVariable("invoiceId") Integer invoiceId)
 			throws DetailsException{
-		ByteArrayInputStream byteArrayInputStream = pdfService.createPdfById(detailsId);
+		ByteArrayInputStream byteArrayInputStream = pdfService.createPdfById(invoiceId);
 		
 		HttpHeaders httpHeaders = new HttpHeaders();
 		httpHeaders.add("Content-Desposition", "inline;file=data.pdf");

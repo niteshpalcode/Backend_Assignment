@@ -31,15 +31,13 @@ public class PdfServiceImpl implements PdfService {
 		Details details = detailsRepository.findById(detailsId)
 				.orElseThrow(() -> new DetailsException("No detials is found with this id"));
 
-		
-		
 		ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
 
 		Document document = new Document();
 		try {
 			PdfWriter.getInstance(document, byteArrayOutputStream);
 			document.open();
-			
+
 			PdfPTable table = new PdfPTable(2);
 			table.setWidthPercentage(90);
 
@@ -69,25 +67,25 @@ public class PdfServiceImpl implements PdfService {
 			table2.setWidths(columnWidths);
 			PdfPCell cell1_1 = new PdfPCell(new Phrase("Item"));
 			cell1_1.setHorizontalAlignment(Element.ALIGN_CENTER);
-			cell1_1.setPaddingTop(5f); 
+			cell1_1.setPaddingTop(5f);
 			cell1_1.setPaddingBottom(10f);
 			table2.addCell(cell1_1);
 
 			PdfPCell cell2_2 = new PdfPCell(new Phrase("Quantity"));
 			cell2_2.setHorizontalAlignment(Element.ALIGN_CENTER);
-			cell2_2.setPaddingTop(5f); 
+			cell2_2.setPaddingTop(5f);
 			cell2_2.setPaddingBottom(10f);
 			table2.addCell(cell2_2);
 
 			PdfPCell cell3 = new PdfPCell(new Phrase("Rate"));
 			cell3.setHorizontalAlignment(Element.ALIGN_CENTER);
-			cell3.setPaddingTop(5f); 
+			cell3.setPaddingTop(5f);
 			cell3.setPaddingBottom(10f);
 			table2.addCell(cell3);
 
 			PdfPCell cell4 = new PdfPCell(new Phrase("Amount"));
 			cell4.setHorizontalAlignment(Element.ALIGN_CENTER);
-			cell4.setPaddingTop(5f); 
+			cell4.setPaddingTop(5f);
 			cell4.setPaddingBottom(10f);
 			table2.addCell(cell4);
 
@@ -100,34 +98,37 @@ public class PdfServiceImpl implements PdfService {
 
 			List<Items> items = itemsRepository.findAll();
 			if (!items.isEmpty()) {
-				for(int i=0;i<items.size();i++) {
-				Items item1 = items.get(i);
 
-				PdfPCell nameCell = new PdfPCell(new Phrase(item1.getName()));
-				nameCell.setHorizontalAlignment(Element.ALIGN_CENTER);
-				nameCell.setPaddingTop(5f);
-				nameCell.setPaddingBottom(10f);
-				table1.addCell(nameCell);
+				for (int i = 0; i < items.size(); i++) {
 
-				PdfPCell amountCell = new PdfPCell(new Phrase(String.format("%.2f", item1.getAmount())));
-				amountCell.setHorizontalAlignment(Element.ALIGN_CENTER);
-				amountCell.setPaddingTop(5f); 
-				amountCell.setPaddingBottom(10f);
-				table1.addCell(amountCell);
+					Items item1 = items.get(i);
+					if (item1.getDetails().getId() == detailsId) {
 
-				PdfPCell quantityCell = new PdfPCell(new Phrase(item1.getQuantity()));
-				quantityCell.setHorizontalAlignment(Element.ALIGN_CENTER);
-				quantityCell.setPaddingTop(5f);
-				quantityCell.setPaddingBottom(10f);
-				table1.addCell(quantityCell);
+						PdfPCell nameCell = new PdfPCell(new Phrase(item1.getName()));
+						nameCell.setHorizontalAlignment(Element.ALIGN_CENTER);
+						nameCell.setPaddingTop(5f);
+						nameCell.setPaddingBottom(10f);
+						table1.addCell(nameCell);
 
-				PdfPCell rateCell = new PdfPCell(new Phrase(String.format("%.2f", item1.getRate())));
-				rateCell.setHorizontalAlignment(Element.ALIGN_CENTER);
-				rateCell.setPaddingTop(5f); 
-				rateCell.setPaddingBottom(10f);
-				table1.addCell(rateCell);
+						PdfPCell amountCell = new PdfPCell(new Phrase(item1.getQuantity()));
+						amountCell.setHorizontalAlignment(Element.ALIGN_CENTER);
+						amountCell.setPaddingTop(5f);
+						amountCell.setPaddingBottom(10f);
+						table1.addCell(amountCell);
 
-				
+						PdfPCell quantityCell = new PdfPCell(new Phrase(String.format("%.2f", item1.getRate())));
+						quantityCell.setHorizontalAlignment(Element.ALIGN_CENTER);
+						quantityCell.setPaddingTop(5f);
+						quantityCell.setPaddingBottom(10f);
+						table1.addCell(quantityCell);
+
+						PdfPCell rateCell = new PdfPCell(new Phrase(String.format("%.2f", item1.getAmount())));
+						rateCell.setHorizontalAlignment(Element.ALIGN_CENTER);
+						rateCell.setPaddingTop(5f);
+						rateCell.setPaddingBottom(10f);
+						table1.addCell(rateCell);
+
+					}
 				}
 				document.add(table1);
 			}
