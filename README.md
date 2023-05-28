@@ -6,4 +6,5 @@ A Spring Boot application that utilizes a Java Template Engine to generate PDF d
 
 ## Weather_Info
 
-a Spring Boot application that offers a RESTful API for retrieving weather information based on a specific day and pincode. 
+The Spring Boot application that offers a RESTful API for retrieving weather information based on a specific day and pincode.
+The Spring Boot application provides a user-friendly REST API that enables users to retrieve weather information by specifying a particular day and pincode.
