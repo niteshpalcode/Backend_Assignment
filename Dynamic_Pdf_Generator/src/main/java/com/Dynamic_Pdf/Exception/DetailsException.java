@@ -1,4 +1,4 @@
-package com.FreightFox.Exception;
+package com.Dynamic_Pdf.Exception;
 
 public class DetailsException extends Exception {
 	public DetailsException() {

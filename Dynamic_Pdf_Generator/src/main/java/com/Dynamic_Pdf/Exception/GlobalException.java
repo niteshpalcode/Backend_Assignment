@@ -1,4 +1,4 @@
-package com.FreightFox.Exception;
+package com.Dynamic_Pdf.Exception;
 
 import java.time.LocalDateTime;
 

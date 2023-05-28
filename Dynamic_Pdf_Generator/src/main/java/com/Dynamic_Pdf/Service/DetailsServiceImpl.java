@@ -1,11 +1,11 @@
-package com.FreightFox.Service;
+package com.Dynamic_Pdf.Service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.FreightFox.Entity.Details;
-import com.FreightFox.Exception.DetailsException;
-import com.FreightFox.Repository.DetailsRepository;
+import com.Dynamic_Pdf.Entity.Details;
+import com.Dynamic_Pdf.Exception.DetailsException;
+import com.Dynamic_Pdf.Repository.DetailsRepository;
 
 @Service
 public class DetailsServiceImpl  implements DetailsService{

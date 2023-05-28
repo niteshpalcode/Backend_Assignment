@@ -1,4 +1,4 @@
-package com.FreightFox.Controller;
+package com.Dynamic_Pdf.Controller;
 
 import java.io.ByteArrayInputStream;
 
@@ -14,13 +14,13 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.FreightFox.Entity.Details;
-import com.FreightFox.Entity.Items;
-import com.FreightFox.Exception.DetailsException;
-import com.FreightFox.Exception.ItemsException;
-import com.FreightFox.Service.DetailsService;
-import com.FreightFox.Service.ItemsService;
-import com.FreightFox.Service.PdfService;
+import com.Dynamic_Pdf.Entity.Details;
+import com.Dynamic_Pdf.Entity.Items;
+import com.Dynamic_Pdf.Exception.DetailsException;
+import com.Dynamic_Pdf.Exception.ItemsException;
+import com.Dynamic_Pdf.Service.DetailsService;
+import com.Dynamic_Pdf.Service.ItemsService;
+import com.Dynamic_Pdf.Service.PdfService;
 
 import io.swagger.v3.oas.annotations.parameters.RequestBody;
 

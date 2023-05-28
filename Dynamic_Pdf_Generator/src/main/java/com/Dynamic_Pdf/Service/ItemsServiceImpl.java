@@ -1,16 +1,16 @@
-package com.FreightFox.Service;
+package com.Dynamic_Pdf.Service;
 
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.FreightFox.Entity.Details;
-import com.FreightFox.Entity.Items;
-import com.FreightFox.Exception.DetailsException;
-import com.FreightFox.Exception.ItemsException;
-import com.FreightFox.Repository.DetailsRepository;
-import com.FreightFox.Repository.ItemsRepository;
+import com.Dynamic_Pdf.Entity.Details;
+import com.Dynamic_Pdf.Entity.Items;
+import com.Dynamic_Pdf.Exception.DetailsException;
+import com.Dynamic_Pdf.Exception.ItemsException;
+import com.Dynamic_Pdf.Repository.DetailsRepository;
+import com.Dynamic_Pdf.Repository.ItemsRepository;
 
 @Service
 public class ItemsServiceImpl implements ItemsService {

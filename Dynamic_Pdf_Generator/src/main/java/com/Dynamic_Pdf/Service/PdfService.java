@@ -1,8 +1,8 @@
-package com.FreightFox.Service;
+package com.Dynamic_Pdf.Service;
 
 import java.io.ByteArrayInputStream;
 
-import com.FreightFox.Exception.DetailsException;
+import com.Dynamic_Pdf.Exception.DetailsException;
 
 public interface PdfService {
 

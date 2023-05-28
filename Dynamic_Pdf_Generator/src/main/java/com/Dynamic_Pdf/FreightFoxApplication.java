@@ -1,4 +1,4 @@
-package com.FreightFox;
+package com.Dynamic_Pdf;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

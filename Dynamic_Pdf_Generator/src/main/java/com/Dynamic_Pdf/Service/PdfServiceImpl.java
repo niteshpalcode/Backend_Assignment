@@ -1,15 +1,16 @@
-package com.FreightFox.Service;
+package com.Dynamic_Pdf.Service;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import com.FreightFox.Entity.Details;
-import com.FreightFox.Entity.Items;
-import com.FreightFox.Exception.DetailsException;
-import com.FreightFox.Repository.DetailsRepository;
-import com.FreightFox.Repository.ItemsRepository;
+
+import com.Dynamic_Pdf.Entity.Details;
+import com.Dynamic_Pdf.Entity.Items;
+import com.Dynamic_Pdf.Exception.DetailsException;
+import com.Dynamic_Pdf.Repository.DetailsRepository;
+import com.Dynamic_Pdf.Repository.ItemsRepository;
 import com.lowagie.text.Document;
 import com.lowagie.text.Element;
 import com.lowagie.text.Phrase;

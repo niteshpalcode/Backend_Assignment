@@ -1,4 +1,4 @@
-package com.FreightFox.Entity;
+package com.Dynamic_Pdf.Entity;
 
 import java.util.List;
 
