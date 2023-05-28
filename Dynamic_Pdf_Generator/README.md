@@ -41,6 +41,17 @@ To set up and run the application locally, follow these steps:
 * Run the Sprinngboot app
 * Using swagger-ui (http://localhost:8888/swagger-ui/index.html#/)
 
+## Installation & Run 
+````
+    server.port=8888
+
+    spring.datasource.url=jdbc:mysql://localhost:3306/pdf;
+    spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+    spring.datasource.username=put your mysql username
+    spring.datasource.password=put your mysql password
+    
+````
+
 ## API Documentation:
 
 * http://localhost:8888/generate/addDetails <br>
